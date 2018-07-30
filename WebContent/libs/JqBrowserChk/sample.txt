@@ -1,0 +1,84 @@
+Features
+
+The jQuery Browser Plugin strives to make accessing your visitors' browser information simple and intuitive. It can literally be this simple:
+
+    browser.name: The name of the browser being used.
+
+    alert($.browser.name); // this will alert 'firefox'
+    browser.version: The version of the browser (note, as a string).
+
+    alert($.browser.version); // this will alert '44.0'
+    browser.versionNumber: The version of the browser (note, as an integer).
+
+    alert($.browser.versionNumber); // this will alert '44'
+    alert($.browser.versionNumber + 1); // this will alert '45'
+    browser.versionX: The release of the browser (think 2x, 3x, etc).
+
+    alert($.browser.versionX); // this will alert '4'
+    browser.className: The browser name and browser version as a class name.
+
+    alert($.browser.className); // this will alert 'firefox4'
+    layout.name: The name of the layout engine being used.
+
+    alert($.layout.name); // this will alert 'gecko'
+    layout.version: The version of the layout engine (note, as a string).
+
+    alert($.layout.version); // this will alert '44.0'
+    layout.versionNumber: The version of the layout engine (note, as an integer).
+
+    alert($.layout.versionNumber); // this will alert '44'
+    alert($.layout.versionNumber + 1); // this will alert '45'
+    browser.versionX: The release of the layout engine (think 2x, 3x, etc).
+
+    alert($.layout.versionX); // this will alert '4'
+    layout.className: The browser name and browser version as a class name.
+
+    alert($.layout.className); // this will alert 'gecko4'
+    os.name: The operating system being used.
+
+    alert($.os.name); // this will alert 'win'
+
+Other values that may appears (this is actually based off the browser you're currently viewing this page with).
+
+    firefox: true
+    firefox4: true
+    gecko: true
+    gecko4: true
+    win: true
+
+Examples
+
+In this example, we change the color of a div based on the browser, and then add some text about the browser.
+
+<style type="text/css">
+#browsername {
+	color: #fff;
+	padding: 10px;
+	text-transform: capitalize;
+}
+.firefox #browsername, .chrome #browsername {
+	background: #f00;
+}
+.chrome #browsername {
+	background: #357;
+}
+.msie #browsername {
+	background: #00f;
+}
+.safari #browsername {
+	background: #0f0;
+}
+.opera #browsername {
+	background: #000;
+}
+.iphone #browsername {
+	background: #ccc;
+	color: #000;
+}
+</style>
+<div id="browsername">
+	<script>document.write($.browser.name + ' browser ' + $.browser.versionX + 'x' + '.');</script>
+	<script>document.write($.layout.name + ' layout engine ' + $.layout.version + '.');</script>
+</div>
+firefox browser 4x.
+gecko layout engine 44.0. 

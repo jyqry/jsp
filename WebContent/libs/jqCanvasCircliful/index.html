@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>Circliful</title>
+
+<link href="css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.circliful.js"></script>
+
+<style>
+body {
+    font-family: arial,verdana, sans-serif;
+    font-size: 12px;
+}
+
+
+</style>
+</head>
+<body style='background-color      : #e6f2b6'>
+<div style='top:0px;' id="myStathalf" data-dimension="250" data-text="35%" data-info="New Clients1" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#7ea568" data-bgcolor="#eee" data-type="half" data-fill="#ddd"></div>
+
+<div style='top:0px; left:300px; position:absolute;' id="myStat" data-dimension="250" data-text="35%" data-info="New Clients2" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+
+<div id="myStathalf2" data-dimension="250" data-text="35" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#7ea568" data-bgcolor="#eee" data-type="half" data-icon="fa-task"></div>
+
+<div id="myStat2" data-dimension="250" data-text="35%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="#eee"></div>
+
+<div id="myStat3" data-startdegree="90" data-dimension="250" data-text="35%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="#eee"></div>
+test1
+<div id="myStat4" data-startdegree="180" data-dimension="250" data-text="35%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="rgba(0,0,0,0.5)"></div>
+test2
+<div id="myStathalf3" data-startdegree="45" data-dimension="250" data-text="50%" data-info="New Clients" data-width="30" data-fontsize="38" data-percent="50" data-fgcolor="#7ea568" data-bgcolor="#eee" data-type="half" data-fill="#ddd"></div>
+
+<script>
+$( document ).ready(function() {
+        $('#myStathalf').circliful();
+		$('#myStat').circliful();
+		$('#myStathalf2').circliful();
+		$('#myStat2').circliful();
+    $('#myStat3').circliful();
+    $('#myStat4').circliful();
+    
+    $('#myStathalf3').circliful();
+    //
+  
+    });
+
+$(document).mouseup(function(e) 
+{
+	//$("#myStathalf3").remove();
+	
+	/*
+	$("#myStathalf3").attr('data-startdegree',45);
+	$("#myStathalf3").attr('data-dimension',250);
+	$("#myStathalf3").attr('data-text','60%');
+	$("#myStathalf3").attr('data-info','New Clients');
+	$("#myStathalf3").attr('data-width',30);
+	$("#myStathalf3").attr('data-fontsize',38);
+	$("#myStathalf3").attr('data-percent',60);
+	$("#myStathalf3").attr('data-type','half');
+	$("#myStathalf3").attr('data-fgcolor','#7ea568');
+	$("#myStathalf3").attr('data-bgcolor','#eee');
+	*/
+	$("#myStathalf3").circliful({
+	    animationStep: 5,
+	    foregroundBorderWidth: 5,
+	    backgroundBorderWidth: 15,
+	    percent: 80,
+	    halfCircle: 1,
+	});
+	alert("test1");
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+class='tablesorter' ³Ö°í
+$(document).ready(function(){ 
+	$("#myTable").tablesorter();
+}); 

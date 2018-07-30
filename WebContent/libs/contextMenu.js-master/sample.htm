@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="contextMenu.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="contextMenu.min.js"></script>
+
+
+<br>
+<br>
+<br>
+<br>
+<div class="testButton" id="testButton1">Click me</div>
+
+
+<script >
+var menu = [{
+        name: 'create',
+        title: 'create button',
+        fun: function () {
+            alert('i am add button')
+        }
+    }, {
+        name: 'update',
+        title: 'update button',
+        fun: function () {
+            alert('i am update button')
+        }
+    }, {
+        name: 'delete',
+        title: 'delete button',
+        subMenu: [{
+            'name': 'soft delete',
+            fun:function(){
+            alert('You can recover back');
+            }
+        }, {
+            'name': 'hard delete',
+            fun:function(){
+            alert('It will delete permanently');
+            }
+        }]
+ 
+    }];
+ 
+//Calling context menu
+ 
+ $('.testButton').contextMenu(menu);
+ //$('.testButton').trigger('click');
+ </script>

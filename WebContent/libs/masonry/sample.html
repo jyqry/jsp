@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>Masonry</title>
+  
+	<script src="../Jquery/jquery-1.9.1.min.js"></script>
+    <script src="masonry.pkgd.min.js"></script>
+	<link type='text/css' href='basic.css' rel='stylesheet' />
+  </head>
+  <body>
+  
+
+	<div class="grid" >
+		<div class="grid-item"></div>
+		<div class="grid-item grid-item--width2 grid-item--height2"></div>
+		<div class="grid-item grid-item--height3"></div>
+		<div class="grid-item grid-item--height2"></div>
+		<div class="grid-item grid-item--width3"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item grid-item--height2"></div>
+		<div class="grid-item grid-item--width2 grid-item--height3"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item grid-item--height2"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item grid-item--width2 grid-item--height2"></div>
+		<div class="grid-item grid-item--width2"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item grid-item--height2"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item grid-item--height3"></div>
+		<div class="grid-item grid-item--height2"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item"></div>
+		<div class="grid-item grid-item--height2"></div>
+	</div>
+	<button onclick='AddItem();'>Add</button>
+
+    <script>
+    var iAdd=0;
+    function AddItem()
+    {
+    	//alert("test1");
+    	var cObj = document.createElement( "div" );
+    	cObj.id=("dummy"+iAdd);
+    	//alert(cObj.id);
+    	iAdd++;
+    	$('.grid').append(cObj);
+    	$('#'+cObj.id).attr("class","grid-item");
+    	$('.grid').masonry('appended',$('#'+cObj.id) );
+    	//alert("test2");
+    }
+      $('.grid').masonry({
+		  itemSelector: '.grid-item',
+		  columnWidth: 120
+		});
+    </script>
+  </body>
+</html>

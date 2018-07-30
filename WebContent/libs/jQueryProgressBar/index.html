@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery LineProgressbar Demo</title>
+
+<link href="lineProgressbar.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div class="container">
+<div id="jq"></div>
+<div id="html"></div>
+<div id="css"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="lineProgressbar.js"></script>
+<script>
+$('#jq').LineProgressbar({
+pst:90,
+radius: '3px',
+height: '20px',
+});
+$('#html').LineProgressbar({
+pst:80,
+radius: '3px',
+height: '20px',
+fillBackgroundColor: '#DA4453'
+});
+$('#css').LineProgressbar({
+pst:5,
+radius: '30px',
+height: '20px',
+fillBackgroundColor: '#E0C341'
+});
+
+var per=50;
+function Reset()
+{
+	$('#css').LineProgressbar({
+	pst:per,
+	radius: '30px',
+	height: '20px',
+	fillBackgroundColor: '#E0C341'
+	});
+	setTimeout(function()
+	{ 
+		Reset();
+		per-=1;
+	}
+	, 1000);
+}
+Reset();
+</script>
+
+</body>
+</html>

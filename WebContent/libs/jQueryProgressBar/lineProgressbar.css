@@ -1,0 +1,15 @@
+/** Progressbar class css*/
+.progressbar {
+    width: 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position: relative;
+	background-color: #6c6c6c;
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,.1);
+}
+.proggress{
+	height: 8px;
+	width: 10px;
+	background-color: #3498db;
+	text-align:center;
+}
